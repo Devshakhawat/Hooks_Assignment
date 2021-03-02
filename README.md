@@ -1,7 +1,7 @@
 # Hooks_Assignment
 I have added Five Folder in this repository.
 
-Folder One: I have done a simple plugin that shows number of visitors after each content 
+Folder One: I have done a simple plugin that shows number of visitors after each post
 
 Folder Two: I have modified visitor counts value with em tag
 
