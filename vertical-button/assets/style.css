@@ -1,0 +1,28 @@
+button {
+    background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+    
+    
+}
+.simplebtn {
+    /* margin-top: 20%; */
+    transform: rotate(90deg);
+    position: fixed;
+    right: 0;
+    top: 40%;
+}
+
+.right-alignment {
+    
+    
+    transform: rotate(90deg);
+    position: absolute;
+    right: 0;
+    top: 40%;
+}

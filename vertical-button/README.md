@@ -1,0 +1,2 @@
+# Inside vertical button
+Vertical-button: I have added a vertical button and changes it's text with filter hook also added a decription using filter hook below the button. Added a meta tag inside the header also.
