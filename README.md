@@ -1,5 +1,5 @@
 # Assignments
-# I will update all assignment status Here
+# I will update all assignments status Here
 I have added Five Folder in this repository.
 
 Folder One: I have done a simple plugin that shows number of visitors after each post
