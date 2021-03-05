@@ -1,0 +1,1 @@
+I have added all six input fields in this plugin also made fileds dynamic
