@@ -16,5 +16,7 @@ Vertical-button: I have added a vertical button and changes it's text with filte
 
 Shortcode: I added Contact form plugin using shortcodes inside this folder
 
+Metabox Assignment: I added two plugins inside this folder. Post excerpt plugin takes excerpt under post and we can fetch it through shotcode. Post views plugin shows title with post views which we could do with shortcode
+
 ## Contributor
 Shakhawat Hossain

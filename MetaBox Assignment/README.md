@@ -1,0 +1,1 @@
+Metabox Assignment: I added two plugins inside this folder. Post excerpt plugin takes excerpt under post and we can fetch it through shotcode. Post views plugin shows title with post views which we could do with shortcode
