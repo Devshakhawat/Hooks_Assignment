@@ -91,13 +91,13 @@ class Post_Excerpt {
      * @return null
      */
     public function save_post_value( $post_id ) {
-        $excerpt = isset( $_POST[ 'add_excerpt' ] ) ? $_POST[ 'add_excerpt' ] : '';
+        $excerpt = isset( $_POST[ 'add_excerpt' ] ) ? sanitize_text_field( $_POST[ 'add_excerpt' ] ) : '';
         
         if ( $excerpt == '' ) {
             return $post_id;
         }
 
-        update_post_meta( $post_id, 'update_excerpt', sanitize_text_field( $excerpt ) );
+        update_post_meta( $post_id, 'update_excerpt', $excerpt );
     }
 
     /**
@@ -132,7 +132,6 @@ class Post_Excerpt {
      */
     public function post_meta_func( $post ) {
         $excerpt = get_post_meta( $post->ID, 'update_excerpt', true );
-        
         $label = __( 'Excerpt', 'mymeta' );
         
         ob_start();
