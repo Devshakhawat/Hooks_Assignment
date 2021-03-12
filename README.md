@@ -16,9 +16,9 @@ Vertical-button: I have added a vertical button and changes it's text with filte
 
 Shortcode: I added Contact form plugin using shortcodes inside this folder
 
-Book-Review: I have added a plugin inside this folder. Added a custom post type named book also added five metaboxes and display it's values at single-book.php template inside theme
+Metabox Assignment: I added two plugins inside this folder. Post excerpt plugin takes excerpt under post and we can fetch it through shotcode. Post views plugin shows title with post views which we could do with shortcode.
 
-Metabox Assignment: I added two plugins inside this folder. Post excerpt plugin takes excerpt under post and we can fetch it through shotcode. Post views plugin shows title with post views which we could do with shortcode
+Book-Review: I have added a plugin inside this folder. Added a custom post type named book also added five metaboxes and display it's values at single-book.php template inside theme
 
 ## Contributor
 Shakhawat Hossain
