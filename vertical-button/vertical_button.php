@@ -8,16 +8,16 @@ Author URI:
 License:
 Text Domain: vbutton
  */
-/***
- * Added a verticle button right
-of the screen
- *
- * @Since 1.0.0
- *
- * @param null
- *
- * @Return void
- ***/
+
+/**
+* Added a verticle button right of the screen
+*
+* @since 1.0.0
+*
+* @param null
+*
+* @return void
+*/
 class Vertical_Button {
     public function __construct() {
         add_action( 'wp_enqueue_scripts', [$this, 'load_asset'] );
@@ -27,28 +27,29 @@ class Vertical_Button {
         $this->demo_plugin();
 
     }
-    /***
-     * Enqueued stylesheet
-     *
-     * @Since 1.0.0
-     *
-     * @param null
-     *
-     * @Return Void
-     ***/
+
+    /**
+    * Enqueued stylesheet
+    *
+    * @since 1.0.0
+    *
+    * @param null
+    *
+    * @return void
+    */
     public function load_asset() {
         wp_enqueue_style( 'btn-main', plugin_dir_url( __FILE__ ) . "/assets/style.css", null, time() );
-
     }
-    /***
-     * Added click me button
-     *
-     * @Since 1.0.0
-     *
-     * @param Null
-     *
-     * @Return Void
-     ***/
+
+    /**
+    * Added click me button
+    *
+    * @since 1.0.0
+    *
+    * @param null
+    *
+    * @return void
+    */
     public function demo_plugin() {
         $firstbutton = '<button type="button">Click Me!</button>';
         $description = "<div class= 'right-alignment'> added few bulk tests here lorem ipsum dolor sit amet</div>";
@@ -60,15 +61,16 @@ class Vertical_Button {
             echo $value2;
         }
     }
-    /***
-     * Modified Texts using custom filter
-     *
-     * @Since 1.0.0
-     *
-     * @param Texts
-     *
-     * @Return String
-     ***/
+    
+    /**
+    * Modified Texts using custom filter
+    *
+    * @since 1.0.0
+    *
+    * @param string texts
+    *
+    * @return string $text
+    */
 
     public function modify_desc( $texts ) {
 
