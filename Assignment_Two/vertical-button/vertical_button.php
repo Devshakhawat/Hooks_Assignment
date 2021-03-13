@@ -56,7 +56,7 @@ class Vertical_Button {
         $value       = apply_filters( 'modify_button', $firstbutton );
         $value2      = apply_filters( 'add_desc', $description );
 
-        if ( !is_admin() ) {
+        if ( ! is_admin() ) {
             echo $value;
             echo $value2;
         }
@@ -78,31 +78,28 @@ class Vertical_Button {
 
     }
 
-    /***
-     * Add meta texts here
-     *
-     * @Since 1.0.0
-     *
-     * @param Null
-     *
-     * @Return Void
-     ***/
+    /**
+    * Add meta texts here
+    *
+    * @since 1.0.0
+    *
+    * @param null
+    *
+    * @return void
+    */
     public function add_meta_data() {
-
         ?>
 
         <meta name="abc" content="xyz" />
         <meta name="desc" content="add description here" />
 
       <?php
-
     }
 
     public function change_button( $content ) {
         $content = "<div class= 'simplebtn'><button type='button'>Touch Here!</button></div>";
-        //error_log(print_r($content, 1));
+        
         return $content;
-
     }
 }
 new Vertical_Button();
