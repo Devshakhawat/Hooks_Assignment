@@ -1,6 +1,9 @@
-Registered custom post type and Added metaboxes under  book posts. added category taxonomy and show meta values at single-books.php codes.
-Just added display values using siple code below:
+<?php
 
+get_header();
+
+
+/* Start the Loop */
  while ( have_posts() ) {
 	the_post();
 	$postID = get_the_ID();
@@ -11,10 +14,11 @@ Just added display values using siple code below:
 	$wdp_pdate = get_post_meta( $postID, 'wdp_pdate', true );
 	$wdp_email = get_post_meta( $postID, 'wdp_email', true );
 
-	
 	echo $writer_name .'<br>';
 	echo $wdp_pub_name .'<br>';
 	echo $wdp_isbn_no .'<br>';
 	echo $wdp_pdate . '<br>';
 	echo $wdp_email;
 }
+
+get_footer();
