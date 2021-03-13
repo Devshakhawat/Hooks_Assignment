@@ -121,7 +121,6 @@ class Wedevs_Books {
 
             if( is_singular( $post_type ) ) {
                 $path_of_template = __DIR__ . '/templates/single-books.php';
-                //error_log( print_r( $path_of_template , 1));
             }
         }
         
