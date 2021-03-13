@@ -1,0 +1,2 @@
+Book-Review: I have added a plugin inside this folder. Added a custom post type named book also added five metaboxes and display it's values at single-books.php template inside theme. If single-books.php
+doesn't exit load it from plugin
