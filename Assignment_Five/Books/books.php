@@ -137,11 +137,11 @@ class Wedevs_Books {
      * @return void
      */
     public function wdp_book_fields( $post ) {
-        $wname_meta_value = esc_html( get_post_meta( $post->ID, 'writer_name', true ) );
-        $pname_meta_value = esc_html( get_post_meta( $post->ID, 'wdp_pub_name', true ) );
-        $isbn_meta_value  = esc_html( get_post_meta( $post->ID, 'wdp_isbn_no', true ) );
-        $date_meta_value  = esc_html( get_post_meta( $post->ID, 'wdp_pdate', true ) );
-        $email_meta_value = esc_html( get_post_meta( $post->ID, 'wdp_email', true ) );
+        $wname_meta_value = esc_attr( get_post_meta( $post->ID, 'writer_name', true ) );
+        $pname_meta_value = esc_attr( get_post_meta( $post->ID, 'wdp_pub_name', true ) );
+        $isbn_meta_value  = esc_attr( get_post_meta( $post->ID, 'wdp_isbn_no', true ) );
+        $date_meta_value  = esc_attr( get_post_meta( $post->ID, 'wdp_pdate', true ) );
+        $email_meta_value = esc_attr( get_post_meta( $post->ID, 'wdp_email', true ) );
 
         require_once __DIR__ . '/templates/meta-form.php';
     }
