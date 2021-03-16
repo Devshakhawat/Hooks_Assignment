@@ -21,5 +21,7 @@ Metabox Assignment: I added two plugins inside this folder. Post excerpt plugin 
 Book-Review: I have added a plugin inside this folder. Added a custom post type named book also added five metaboxes and display it's values at single-books.php template inside theme. If single-books.php
 doesn't exit load it from plugin
 
+Assignment_six : added two small plugins one is declared custom taxonomy named books and attached with books custom post type. second one is a seach field which was displayed through shortcode. also we can search with meta fields value and it shows corresponding results.
+
 ## Contributor
 Shakhawat Hossain
