@@ -21,7 +21,6 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @param null
  *
  */
-
 class Book_Search {
     /**
      * Declared shortcode inside constructor
