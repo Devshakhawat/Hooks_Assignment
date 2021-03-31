@@ -24,11 +24,13 @@ class Address_list extends \WP_List_Table {
 
     /**
      * Message to show if no designation found
+     * 
+     * @since 1.0.0
      *
      * @return void
      */
     function no_items() {
-        _e( 'No address found', 'capp' );
+        esc_html_e( 'No address found', 'capp' );
     }
 
     /**
@@ -39,8 +41,7 @@ class Address_list extends \WP_List_Table {
     public function get_columns() {
         return array(
             'cb'         => '<input type="checkbox" />',
-            'first_name' => __( 'First Name', 'capp' ),
-            'last_name'  => __( 'Last Name', 'capp' ),
+            'first_name' => __( 'Name', 'capp' ),
             'phone'      => __( 'Phone', 'capp' ),
             'created_at' => __( 'Date', 'capp' ),
         );
@@ -112,7 +113,7 @@ class Address_list extends \WP_List_Table {
         $actions['delete'] = sprintf( '<a href="%s" class="submitdelete" onclick="return confirm(\'Are you sure?\');" title="%s">%s</a>', wp_nonce_url( admin_url( 'admin-post.php?action=wd-delete-address&id=' . $item->id ), 'wd-delete-address' ), $item->id, __( 'Delete', 'capp' ), __( 'Delete', 'capp' ) );
 
         return sprintf(
-            '<a href="%1$s"><strong>%2$s</strong></a> %3$s', admin_url( 'admin.php?page=crud-operation&action=view&id' . $item->id ), $item->first_name, $this->row_actions( $actions )
+            '<a href="%1$s"><strong>%2$s</strong></a> %3$s', admin_url( 'admin.php?page=crud-operation&action=view&id' . $item->id ), $item->first_name ." ". $item->last_name, $this->row_actions( $actions )
         );
     }
 

@@ -2,6 +2,11 @@
 namespace crud\app\Admin;
 use crud\app\Traits\Form_Error;
 
+/**
+ * declared address class
+ *
+ * @since 1.0.0
+ */
 class Address {
 
     use Form_Error;
@@ -115,7 +120,6 @@ class Address {
      *
      * @return void
      */
-
     public function delete_address() {
         if ( ! wp_verify_nonce( $_REQUEST['_wpnonce'], 'wd-delete-address' ) ) {
             wp_die( 'Are you cheating?' );

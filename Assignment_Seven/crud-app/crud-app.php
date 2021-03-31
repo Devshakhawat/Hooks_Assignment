@@ -19,19 +19,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 require_once __DIR__ . '/vendor/autoload.php';
 
 /**
- * Declared class to execute curds
+ * Declared class to execute cruds
  *
  * @since 1.0.0
  */
 final class crud_app {
     /**
-     *
+     * call necessary methods
      *
      * @since 1.0.0
      */
     public function __construct() {
         $this->constants_declared();
-        register_activation_hook(__FILE__, array( $this, 'activate' ));
+        register_activation_hook( __FILE__, array( $this, 'activate' ) );
         add_action( 'plugins_loaded', array( $this, 'admin_init' ) );
 
     }
@@ -44,24 +44,24 @@ final class crud_app {
      * @return void
      */
     public function admin_init() {
+        new \crud\app\Assets();
 
         if ( is_admin() ) {
             new crud\app\Admin();
         } else {
             new crud\app\Frontend();
         }
-
     }
 
     /**
-    * 
-    *
-    * @since 
-    *
-    * @param 
-    *
-    * @return 
-    */
+     *
+     *
+     * @since
+     *
+     * @param
+     *
+     * @return
+     */
     public function activate() {
         $installer = new crud\app\Installer();
         $installer->run();
@@ -79,6 +79,7 @@ final class crud_app {
         define( 'CRUD_APP_PATH', __DIR__ );
         define( 'CRUD_APP_URL', plugins_url( '', CRUD_APP_FILE ) );
         define( 'CRUD_APP_ASSETS', CRUD_APP_URL . '/assets' );
+
     }
 
     /**

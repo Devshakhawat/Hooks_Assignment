@@ -17,11 +17,8 @@
     <form method= "post">
         <?php 
             $table = new crud\app\Admin\Address_list();
-
             $table->prepare_items();
             $table->display();
-
         ?>
     </form>
-
 </div>

@@ -32,7 +32,7 @@ function wd_insert_address( $args = array() ) {
         $updated = $wpdb->update(
             "{$wpdb->prefix}wd_address",
             $data,
-            array('id' => $id),
+            array( 'id' => $id ),
             array(
                 '%s',
                 '%s',
@@ -40,7 +40,7 @@ function wd_insert_address( $args = array() ) {
                 '%d',
                 '%s',
             ),
-            array('%d')
+            array( '%d' )
         );
 
         return $updated;
@@ -92,7 +92,6 @@ function wd_get_address( $args = array() ) {
 
     $items = $wpdb->get_results( $sql );
     return $items;
-
 }
 
 /**
@@ -137,7 +136,7 @@ function wd_delete_address( $id ) {
 
     return $wpdb->delete(
         $wpdb->prefix . 'wd_address',
-        array('id' => $id),
-        array('%d')
+        array( 'id' => $id ),
+        array( '%d' )
     );
 }

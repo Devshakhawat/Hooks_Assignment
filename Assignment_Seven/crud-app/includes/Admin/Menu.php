@@ -49,5 +49,4 @@ class Menu {
     public function settings_operation() {
         echo "hello from crud settings";
     }
-
 }

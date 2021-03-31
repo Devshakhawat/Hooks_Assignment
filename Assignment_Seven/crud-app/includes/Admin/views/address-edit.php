@@ -1,9 +1,8 @@
 <div class='wrap'>
-
     <h1 class="wp-heading-inline"><?php esc_html_e( 'Edit Address', 'capp' ) ?></h1>
     <?php if ( isset( $_GET['address-updated'] ) ) { ?>
         <div class="notice notice-success">
-            <p><?php _e( 'Address has been updated successfully!', 'capp' ); ?></p>
+            <p><?php esc_html_e( 'Address has been updated successfully!', 'capp' ); ?></p>
         </div>
     <?php } ?>
 
@@ -16,7 +15,6 @@
                     !empty( esc_attr($address->first_name) ) ) {
                         echo esc_attr( $address->first_name );
                     } 
-
                     ?>">
 
                     <?php if ( $this->has_error( 'fname' ) ) { ?>

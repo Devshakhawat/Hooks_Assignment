@@ -2,18 +2,18 @@
 namespace crud\app;
 
 /**
-* added admin class
-*
-* @since 1.0.0
-*/
+ * added admin class
+ *
+ * @since 1.0.0
+ */
 class Admin {
     public $name = 'Admin';
 
     /**
-    * declared constructor
-    *
-    * @since 1.0.0
-    */
+     * declared constructor
+     *
+     * @since 1.0.0
+     */
     public function __construct() {
         $address = new Admin\Address();
         new Admin\Menu( $address );
@@ -21,10 +21,12 @@ class Admin {
     }
 
     /**
-    * declared function to dispatch
-    *
-    * @since 1.0.0
-    */
+     * declared function to dispatch
+     * 
+     * @param object $address
+     *
+     * @since 1.0.0
+     */
     public function dispatch_action( $address ) {
         add_action( 'admin_init', array( $address, 'form_handler' ) );
         add_action( 'admin_post_wd-delete-address', array( $address, 'delete_address' ) );

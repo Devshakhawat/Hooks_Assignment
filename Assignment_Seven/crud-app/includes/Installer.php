@@ -9,7 +9,6 @@ namespace crud\app;
 class Installer {
     public function run() {
         $this->create_tables();
-
     }
 
     /**
@@ -34,5 +33,4 @@ class Installer {
 
         dbDelta( $schema );
     }
-
 }
