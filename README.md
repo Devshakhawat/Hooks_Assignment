@@ -23,5 +23,9 @@ doesn't exit load it from plugin
 
 Assignment_six : added two small plugins one is declared custom taxonomy named books and attached with books custom post type. second one is a seach field which was displayed through shortcode. also we can search with meta fields value and it shows corresponding results.
 
+Assignment_seven : working with WP_List table. create, delete, update, sort, view
+
+Assignment_Eight : Added Cat Facts and Recent Post Dashboard Widgets. Cat facts widget fetch data from api and display 5 cat facts and recent posts widget shows latest posts based on selected items like category, order and no. of posts.
+
 ## Contributor
 Shakhawat Hossain
