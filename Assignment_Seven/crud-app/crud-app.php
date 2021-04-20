@@ -29,7 +29,7 @@ final class crud_app {
      *
      * @since 1.0.0
      */
-    public function __construct() {
+    private function __construct() {
         $this->constants_declared();
         register_activation_hook( __FILE__, array( $this, 'activate' ) );
         add_action( 'plugins_loaded', array( $this, 'admin_init' ) );
