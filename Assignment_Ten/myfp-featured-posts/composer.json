@@ -1,0 +1,12 @@
+{
+    "name": "shakhawat/featured-post",
+    "description": "this plugin will show settings api",
+    "type": "wordpress-plugin",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "feature\\post\\": "includes/"
+        }
+    }
+}

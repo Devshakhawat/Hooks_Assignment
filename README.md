@@ -29,5 +29,7 @@ Assignment_Eight : Added Cat Facts and Recent Post Dashboard Widgets. Cat facts 
 
 Assignemnt_Nine: Fetch data from github api and display on website along with single post data
 
+Assignment_Ten: Added Feature Posts plugin to this folder
+
 ## Contributor
 Shakhawat Hossain
