@@ -27,5 +27,7 @@ Assignment_seven : working with WP_List table. create, delete, update, sort, vie
 
 Assignment_Eight : Added Cat Facts and Recent Post Dashboard Widgets. Cat facts widget fetch data from api and display 5 cat facts and recent posts widget shows latest posts based on selected items like category, order and no. of posts.
 
+Assignemnt_Nine: Fetch data from github api and display on website along with single post data
+
 ## Contributor
 Shakhawat Hossain

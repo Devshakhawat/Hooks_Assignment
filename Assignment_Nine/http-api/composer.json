@@ -1,0 +1,13 @@
+{
+    "name": "http-api/fetch",
+    "description": "fetch data from http api",
+    "type": "wordpress-plugin",
+    "license": "gplv2",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "http\\api\\":"includes/"
+        }
+    }
+}
