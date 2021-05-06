@@ -1,4 +1,3 @@
-
     <div>
         <br><label for="num"><b><?php echo _e( 'No. of posts:', 'dwidget' ) ?></b></label>
         <input type="number" name="number" id="num" value="<?php echo esc_attr( $_REQUEST['number'] ); ?>">

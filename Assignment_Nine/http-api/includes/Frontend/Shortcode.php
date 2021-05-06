@@ -8,7 +8,6 @@ use Composer\Installers\CockpitInstaller;
  *
  * @since 1.0.0
  */
-
 class Shortcode {
 
     /**

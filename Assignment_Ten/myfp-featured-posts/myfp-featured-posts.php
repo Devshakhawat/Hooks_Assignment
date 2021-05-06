@@ -21,6 +21,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 if ( ! class_exists( 'Myfp_Featured_posts' ) ):
     
 final class Myfp_Featured_posts {
+
     /**
      * call necessary methods
      *
@@ -62,7 +63,7 @@ final class Myfp_Featured_posts {
 
     }
 
-        /**
+    /**
      * singletone pattern instantiate
      *
      * @since 1.0.0
@@ -80,7 +81,9 @@ final class Myfp_Featured_posts {
         return $instantiate;
     }
 }
+
 endif;
+
 function execute_insiders() {
     return Myfp_Featured_posts::init();
 }

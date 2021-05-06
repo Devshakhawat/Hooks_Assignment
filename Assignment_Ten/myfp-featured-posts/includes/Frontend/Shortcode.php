@@ -22,7 +22,6 @@ class Shortcode {
      */
     public function shortcode_func() {
 
-        //get values from database
         $value = get_option( 'wedevs_basics' );
 
         $categories = $value['multicheck'];

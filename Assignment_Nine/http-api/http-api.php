@@ -35,7 +35,6 @@ final class Http_api {
 
     }
 
-    
     /**
      * declared admin init
      *
@@ -51,7 +50,6 @@ final class Http_api {
             new http\api\Frontend();
         }
     }
-
 
     /**
      * constant declaration
