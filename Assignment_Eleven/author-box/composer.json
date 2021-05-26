@@ -1,0 +1,13 @@
+{
+    "name": "shakhawat/authbox",
+    "description": "nothing",
+    "type": "wp-plugin",
+    "license": "gplv2",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "auth\\box\\":"includes/"
+        }
+    }
+}
