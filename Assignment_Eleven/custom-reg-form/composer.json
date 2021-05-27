@@ -1,0 +1,13 @@
+{
+    "name": "shakhawat/registration-form",
+    "description": "simple registration form",
+    "type": "wordpress--plugin",
+    "license": "gplv2",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Reg\\Form\\":"includes/"
+        }
+    }
+}

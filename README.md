@@ -31,5 +31,7 @@ Assignemnt_Nine: Fetch data from github api and display on website along with si
 
 Assignment_Ten: Added Feature Posts plugin to this folder
 
+Assignment_Eleven: Added two plugins here. First one is Author_Box which added two input field to add socials of user and display it under each posts.  Second one is custom user role and capabilities. Where using a form users could register custom roles with custom capabilities. Based on these roles I have shown dashboard widget.
+
 ## Contributor
 Shakhawat Hossain
