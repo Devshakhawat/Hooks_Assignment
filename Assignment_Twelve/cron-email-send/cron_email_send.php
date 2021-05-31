@@ -1,12 +1,15 @@
 <?php
-/*
-Plugin Name: Cron Email Shedule
-Plugin URI: http://wedevs.com
-Description:  this plugin is made for assignment purpose
-Author: shakhawat
-Author URI: shakhawat.me
-License: gplv2
-Text Domain: ces
+/**
+ * Plugin Name: Cron Email Sheduler
+ * Plugin URI: wedevs.com
+ * Description: this plugin is made for assignment purpose
+ * Version: 1.0.0
+ * Author: Shakhawat
+ * Author URI: shakhawat.com
+ * License: GPL v2 or later
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain: ces
+ * Domain Path: /languages
  */
 
 //Prevent direct access
