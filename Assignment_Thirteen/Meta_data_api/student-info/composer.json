@@ -1,0 +1,14 @@
+{
+    "name": "shakhawat/plugin",
+    "description": "this is assignment plugin",
+    "type": "wordpress-plugin",
+    "license": "gplv2",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Student\\Info\\": "includes/"
+        },
+        "files": [ "includes/functions.php" ]
+    }
+}

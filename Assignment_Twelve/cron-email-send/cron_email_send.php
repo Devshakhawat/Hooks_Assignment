@@ -23,6 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @return void
  */
 final class Cron_Email_Send {
+    
    /**
     * Plugin version
     * 
