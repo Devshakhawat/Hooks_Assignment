@@ -1,0 +1,14 @@
+{
+    "name": "shakhawat/rpw",
+    "description": "not at all",
+    "type": "wordpress-plugin",
+    "license": "gplv2",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Post\\Widget\\": "includes/"
+        },
+        "file": []
+    }
+}
