@@ -2,12 +2,17 @@
 namespace Reg\Form\Admin;
 
 /**
- * added class to show dashboard widgets
+ * Class Dashboard_Wizard
  *
  * @return void
  */
 class Dashboard_Wizard {
-    //Declared Constructor
+
+    /**
+     * Class construct
+     *
+     * @since 1.0.0
+     */
     public function __construct() {
         add_action( 'wp_dashboard_setup', [ $this, 'show_wizard_following_role' ]);
     }
@@ -23,7 +28,7 @@ class Dashboard_Wizard {
      */
     public function show_wizard_following_role() {
         $user_details = wp_get_current_user();
-        $user_name    = $user_details->user_nicename;
+        $user_name    = esc_html( $user_details->user_nicename );
 
         wp_add_dashboard_widget( 'role-based-widget-display', __( 'Congratulation ' . $user_name, 'crf' ), [ $this, 'show_greetings' ] );
     }
@@ -33,9 +38,9 @@ class Dashboard_Wizard {
      *
      * @since 1.0.0
      *
-     * @param 
+     * @param null
      *
-     * @return 
+     * @return void
      */
     public function show_greetings() {
         //get current user object
@@ -43,7 +48,7 @@ class Dashboard_Wizard {
         $allcaps      = $user_details->allcaps;
 
         if( in_array( 'Customer', $user_details->roles ) ) {
-            echo '<h3>You are a Customer <br> Your capabilities are:</h3>'; 
+            echo __( 'You are a Customer Your capabilities are', 'crf' ); 
              
             foreach( $allcaps as $caps => $val ) {
                 echo '<li>' . $caps . '</li>';
@@ -51,7 +56,7 @@ class Dashboard_Wizard {
         }
 
         else if( in_array( 'Maintainer', $user_details->roles ) ) {
-            echo '<h3>you are a Maintainer <br> Your capabilities are:</h3>';
+            echo __( 'You are a Maintainer Your capabilities are', 'crf' );
 
             foreach( $allcaps as $caps => $val ) {
                echo $caps . '<br>';
@@ -59,7 +64,7 @@ class Dashboard_Wizard {
         }
         
         else if( in_array( 'Collaborator', $user_details->roles ) ) {
-            echo '<h3>you are a Collaborator <br> Your capabilities are:</h3>';
+            echo __( 'You are a Collaborator Your capabilities are', 'crf' );
 
             foreach( $allcaps as $caps => $val ) {
                echo $caps . '<br>';

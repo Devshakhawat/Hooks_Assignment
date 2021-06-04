@@ -22,6 +22,7 @@ class Shortcode {
      */
     public function shortcode_func() {
 
+        //get values from database
         $value = get_option( 'wedevs_basics' );
 
         $categories = $value['multicheck'];
@@ -33,7 +34,9 @@ class Shortcode {
 
         if ( $value['selectbox'] == 'rand' ) {
             $orderby = 'rand';
-        } else {
+        }
+        
+        else {
             $order = strtoupper( $value['selectbox'] );
         }
 
@@ -45,8 +48,8 @@ class Shortcode {
             'orderby'        => $orderby,
             'order'          => $order,
             'category_name'  => $cat_names,
-
         );
+        
         $query = new \WP_Query( $args );
 
         if ( $query->have_posts() ) {

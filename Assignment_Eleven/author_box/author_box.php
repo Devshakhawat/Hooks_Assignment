@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Author Box
  * Plugin URI: wedevs.com
- * Description: created test purpose
+ * Description: created author box plugin for assignment
  * Version: 1.0.0
  * Author: Shakhawat
  * Author URI: shakhawat.me
@@ -12,6 +12,7 @@
  * Domain Path: /languages
  */
 
+ //Prevent direct access
 if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
@@ -19,18 +20,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 include_once __DIR__ . '/vendor/autoload.php';
 
 /**
- * main plugin class starts form here
+ * Plugin base class Author_Box
  *
- * @return void
+ * @since 1.0.0
  */
 final class Author_Box {
+
+    /**
+     * 
+     *
+     * @since 1.0.0
+     */
     private function __construct() {
         $this->constants_declared();
+
         add_action( 'plugins_loaded', [ $this, 'admin_init' ] );
     }
     
     /**
-     * constant declaration
+     * Define all constants
      *
      * @since 1.0.0
      *
@@ -44,7 +52,7 @@ final class Author_Box {
     }
 
     /**
-     * declared admin init
+     * Plugin init callback
      *
      * @since 1.0.0
      *
@@ -60,9 +68,9 @@ final class Author_Box {
     }
 
     /**
-     * declare singletone pattern
+     * Singleton instance
      *
-     * @return void
+     * @since 1.0.0
      */
     public static function init() {
        static $instance = false;
@@ -74,7 +82,7 @@ final class Author_Box {
     }
 }
 
-//execute insiders
+//Kickoff plugin
 function auth_initiate() {
     return Author_Box::init();
 }

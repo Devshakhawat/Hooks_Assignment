@@ -12,14 +12,18 @@
  * Domain Path: /languages
  */
 
+ //Prevent direct access
 if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-if ( ! class_exists( 'Myfp_Featured_posts' ) ):
-    
+/**
+ * Plugin base class
+ *
+ * @since 1.0.0
+ */
 final class Myfp_Featured_posts {
 
     /**
@@ -33,7 +37,14 @@ final class Myfp_Featured_posts {
     }
 
     /**
-     * declared admin init
+     * Plugin version 
+     *
+     * @var string version
+     */
+    const version = '1.0.0';
+
+    /**
+     * Plugin init callback
      *
      * @since 1.0.0
      *
@@ -49,18 +60,18 @@ final class Myfp_Featured_posts {
     }
 
     /**
-     * constant declaration
+     * Define all constants
      *
      * @since 1.0.0
      *
      * @return void
      */
     public function constants_declared() {
+        define( 'FEATURE_POST_VERSION', self::version );
         define( 'FEATURE_POST_FILE', __FILE__ );
         define( 'FEATURE_POST_PATH', __DIR__ );
         define( 'FEATURE_POST_URL', plugins_url( '', FEATURE_POST_FILE ) );
         define( 'FEATURE_POST_ASSETS', FEATURE_POST_URL . '/assets' );
-
     }
 
     /**
@@ -82,9 +93,8 @@ final class Myfp_Featured_posts {
     }
 }
 
-endif;
-
-function execute_insiders() {
+//Kickoff plugin
+function myfp_execute_insiders() {
     return Myfp_Featured_posts::init();
 }
-execute_insiders();
+myfp_execute_insiders();

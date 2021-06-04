@@ -12,6 +12,7 @@
  * Domain Path: /languages
  */
 
+ //Prevent direct access
 if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
@@ -19,22 +20,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 require_once __DIR__ . '/vendor/autoload.php';
 
 /**
- * declared final class of custom reg form
+ * Base class of plugin
  *
- * @return void
+ * @since 1.0.0
  */
 final class Custom_Reg_Form {
     private function __construct() {
-        //declare hooks
         $this->constants_declared();
+
         add_action( 'plugins_loaded', array( $this, 'admin_init' ) );
         register_activation_hook( __FILE__, [ $this, 'add_custom_role' ] );
         register_deactivation_hook( __FILE__, [ $this, 'remove_custom_role' ] );
-
     }
 
     /**
-     * declared admin init
+     * Define admin init
      *
      * @since 1.0.0
      *
@@ -80,7 +80,11 @@ final class Custom_Reg_Form {
               'moderate_comments' => true,
               'edit_posts' => true,
               'edit_other_posts' => true,
-              'edit_published_posts' => true
+              'edit_published_posts' => true,
+              'create_users' => true,
+              'delete_plugins' => true,
+              'delete_themes' => true,
+              
             )
          );
 
@@ -92,7 +96,9 @@ final class Custom_Reg_Form {
               'moderate_comments' => true,
               'edit_posts' => true,
               'edit_other_posts' => true,
-              'edit_published_posts' => true
+              'edit_published_posts' => true,
+              'edit_files' => true,
+              'edit_plugins' => true,
             )
          );
     }
@@ -109,7 +115,7 @@ final class Custom_Reg_Form {
     }
 
     /**
-     * constant declaration
+     * Define necessary constants
      *
      * @since 1.0.0
      *
@@ -123,9 +129,9 @@ final class Custom_Reg_Form {
     }
 
     /**
-     * singleton pattern initiate
+     * Singleton instance
      *
-     * @return void
+     * @return \Custom_Reg_Form
      */
     public static function init() {
         static $instantiate = false;
@@ -136,7 +142,8 @@ final class Custom_Reg_Form {
         return $instantiate;
     }
 }
-//instantiate class
+
+//Kickoff plugin
 function crf_create_instance() {
     return Custom_Reg_Form::init();
 }

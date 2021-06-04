@@ -1,6 +1,3 @@
-<?php
-    ob_start();
-?>
 <div class="wrap">
         <div class="avatar-image">
             <?php echo get_avatar( $author->ID, 64 ); ?>
@@ -25,4 +22,3 @@
         </div>
     </div>
 <?php
-return ob_get_clean();

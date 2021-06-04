@@ -9,7 +9,8 @@ namespace auth\box\Admin;
 class Profile {
 
     /**
-     * constructor declared
+     * Class construct
+     * Setup required hooks
      *
      * @return void
      */
@@ -18,7 +19,7 @@ class Profile {
     }
 
     /**
-     * added two meta fields to collect 
+     * added fields to collect 
      * Facebook and twitter url
      *
      * @return void

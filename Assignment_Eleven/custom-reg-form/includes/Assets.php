@@ -2,12 +2,17 @@
 namespace Reg\Form;
 
 /**
- * Added class to register assets
+ * Class Assets
  *
  * @return void
  */
 class Assets {
-    //Declared constructor
+
+    /**
+     * Class constructor
+     *
+     * @since 1.0.0
+     */
     public function __construct() {
         add_action( 'wp_enqueue_scripts', [ $this, 'get_styles' ] );
     }
