@@ -1,0 +1,16 @@
+{
+    "name": "shakhawat/book-review-update",
+    "description": "this is assignment plugin",
+    "type": "wordpress-plugin",
+    "license": "gplv2",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+          "Book\\Review\\": "includes/"
+        },
+        "files": [
+          "includes/functions.php"
+        ]
+      }
+}

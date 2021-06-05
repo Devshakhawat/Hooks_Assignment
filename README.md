@@ -44,5 +44,7 @@ Create a subscription form using mailchimp api and user can save email to mailch
 
 **Assignment_Fifteeen:** cerated Updated contact form. User can save data from frontend using shortcode. also renedered data at admin panel with pagination.
 
+**Assignment_Sixteen:** I have added plugin book review with rating and also show rating using rewrite api
+
 ## Contributor
 Shakhawat Hossain
