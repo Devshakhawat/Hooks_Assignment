@@ -1,0 +1,20 @@
+{
+    "name": "shakhawat/skt-rest-api",
+    "description": "this rest api plugin is made for assignment",
+    "type": "wordpress-plugin",
+    "license": "gplv2 or later",
+    "authors": [
+        {
+            "name": "shakhawat",
+            "email": "shakhawat579@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Rest\\Api\\": "includes/"
+        },
+        "files": [ "includes/functions.php" ]
+    }
+}

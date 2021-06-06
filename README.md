@@ -42,7 +42,9 @@ doesn't exit load it from plugin
 *subscription-form:* 
 Create a subscription form using mailchimp api and user can save email to mailchimp. 
 
-**Assignment_Fifteeen:** cerated Updated contact form. User can save data from frontend using shortcode. also renedered data at admin panel with pagination.
+**Assignment_Fifteeen:** 
+*Contact Form:*cerated Updated contact form. User can save data from frontend using shortcode. also renedered data at admin panel with pagination.
+*Rest API:* Added rest api service plugin 
 
 **Assignment_Sixteen:** I have added plugin book review with rating and also show rating using rewrite api
 
