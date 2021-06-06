@@ -48,8 +48,8 @@ final class crud_app {
         new \Contact\Form\Frontend\Contact_Form();
 
         if( defined( 'DOING_AJAX' ) && DOING_AJAX ) {
+             new Contact\Form\Ajax();
         }
-        new Contact\Form\Ajax();
 
         if ( is_admin() ) {
             new Contact\Form\Admin();
