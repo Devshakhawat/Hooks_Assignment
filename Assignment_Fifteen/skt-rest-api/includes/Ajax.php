@@ -26,12 +26,12 @@ class Ajax {
 
         if ( ! wp_verify_nonce( $_REQUEST['_wpnonce'], 'wd-ac-enquiry-form' ) ) {
             wp_send_json_error( [
-                'message' => __( 'Nonce verification failed!', 'wedevs-academy' )
+                'message' => __( 'Nonce verification failed!', 'skt-rest' )
             ] );
         }
 
         wp_send_json_success([
-            'message' => __( 'Enquiry has been sent successfully!', 'wedevs-academy' )
+            'message' => __( 'Enquiry has been sent successfully!', 'skt-rest' )
         ]);
     }
 
@@ -43,13 +43,13 @@ class Ajax {
     public function delete_contact() {
         if ( ! wp_verify_nonce( $_REQUEST['_wpnonce'], 'wd-ac-admin-nonce' ) ) {
             wp_send_json_error( [
-                'message' => __( 'Nonce verification failed!', 'wedevs-academy' )
+                'message' => __( 'Nonce verification failed!', 'skt-rest' )
             ] );
         }
 
         if ( ! current_user_can( 'manage_options' ) ) {
             wp_send_json_error( [
-                'message' => __( 'No permission!', 'wedevs-academy' )
+                'message' => __( 'No permission!', 'skt-rest' )
             ] );
         }
 
