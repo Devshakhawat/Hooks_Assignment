@@ -102,7 +102,6 @@ class Address_List extends \WP_List_Table {
 
         $actions['edit']   = sprintf( '<a href="%s" title="%s">%s</a>', admin_url( 'admin.php?page=skt-rest&action=edit&id=' . $item->id ), $item->id, __( 'Edit', 'skt-rest' ), __( 'Edit', 'skt-rest' ) );
         $actions['delete'] = sprintf( '<a href="#" class="submitdelete" data-id="%s">%s</a>', $item->id, __( 'Delete', 'skt-rest' ) );
-        //$actions['delete'] = sprintf( '<a href="%s" class="submitdelete" onclick="return confirm(\'Are you sure?\');" title="%s">%s</a>', wp_nonce_url( admin_url( 'admin-post.php?action=wd_ac_delete_address&id=' . $item->id ), 'wd_ac_delete_address' ), $item->id, __( 'Delete', 'skt-rest' ), __( 'Delete', 'skt-rest' ) );
 
         return sprintf(
             '<a href="%1$s"><strong>%2$s</strong></a> %3$s', admin_url( 'admin.php?page=skt-rest&action=view&id' . $item->id ), $item->name, $this->row_actions( $actions )
