@@ -4,11 +4,11 @@
 	<div class="main-agileinfo">
 		<div class="agileits-top">
 			<form action="admin" method="post">
-				<input class="text" type="text" name="name" placeholder="Name" required=""><br>
-				<input class="text" type="text" name="username" placeholder="Username" required="">
-				<input class="text email" type="email" name="email" placeholder="Email" required="">
-				<input class="text" type="password" name="password" placeholder="Password" required="">
-				<input class="text w3lpass" type="password" name="password" placeholder="Confirm Password" required="">
+				<input class="text" type="text" name="name" placeholder="<?php echo __( 'Name', 'crf' ); ?>" required=""><br>
+				<input class="text" type="text" name="username" placeholder="<?php echo __( 'Username', 'crf' ); ?>" required="">
+				<input class="text email" type="email" name="email" placeholder="<?php echo __( 'Email', 'crf' ); ?>" required="">
+				<input class="text" type="password" name="password" placeholder="<?php echo __( 'Password', 'crf' ); ?>" required="">
+				<input class="text w3lpass" type="password" name="password" placeholder="<?php echo __( 'Confirm Password', 'crf' ); ?>" required="">
 
 				<label for="role" class="changecolor"><?php echo __( 'Select Role:', 'crf' ); ?></label><br><br>
 				<select name="role" id="roles">
